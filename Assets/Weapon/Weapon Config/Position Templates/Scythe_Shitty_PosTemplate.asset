@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 822bdf06792429f4788ea1b8e7a1f7d6, type: 3}
+  m_Name: Scythe_Shitty_PosTemplate
+  m_EditorClassIdentifier: 
+  HandPos: {x: -0.101, y: 0.015, z: 0.478}
+  HandEuler: {x: 87.924, y: 304.472, z: 217.958}
+  handScale: {x: 1, y: 0.8, z: 0.65}

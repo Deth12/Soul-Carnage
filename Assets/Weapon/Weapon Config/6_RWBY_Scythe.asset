@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5cfa4d99dadeed4a9fd17daee85f012, type: 3}
+  m_Name: 6_RWBY_Scythe
+  m_EditorClassIdentifier: 
+  weaponId: 6
+  weaponType: 1
+  weaponName: RWBY Scythe
+  shopIcon: {fileID: 21300000, guid: 9fb21392d2fc32f4eade3799eff98bec, type: 3}
+  weaponPrefab: {fileID: 4147281039754980517, guid: 214534edc2491654e9d7805c62cd15ac,
+    type: 3}
+  price: 950
+  posTemplate: {fileID: 11400000, guid: 813fcca8795477a4d8151262bdf23397, type: 2}

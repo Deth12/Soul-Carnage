@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06fabe55940976645bd6dcd52da218a5, type: 3}
+  m_Name: PoolsConfig
+  m_EditorClassIdentifier: 
+  pools:
+  - poolName: Tiles
+    amount: 10
+    prefab: {fileID: 3747095172866319423, guid: 83fe7a524bad9bf4cae991c50f888d46,
+      type: 3}
+    parentTag: Pool_Tiles
+  - poolName: Score
+    amount: 40
+    prefab: {fileID: 4010030618842869160, guid: 74901da725a01804083cbfd2da11563c,
+      type: 3}
+    parentTag: Pool_Enemies
+  - poolName: Wall Rocks
+    amount: 20
+    prefab: {fileID: 1428079442578025233, guid: b5bf76828737f25459b2d563ae94775a,
+      type: 3}
+    parentTag: Pool_Objects
+  - poolName: Blood
+    amount: 4
+    prefab: {fileID: 1698979638433960, guid: 35f735ea8ab99424893b817d677b094d, type: 3}
+    parentTag: Pool_VFX
+  - poolName: Blood_Decals_1
+    amount: 3
+    prefab: {fileID: 100000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
+    parentTag: Pool_Decals
+  - poolName: Blood_Decals_2
+    amount: 3
+    prefab: {fileID: 100000, guid: 18a11fd6df8ceb449b8785301026d639, type: 3}
+    parentTag: Pool_Decals
+  - poolName: Blood_Decals_3
+    amount: 3
+    prefab: {fileID: 100000, guid: 14987c031123b98408a165a8bf1288d4, type: 3}
+    parentTag: Pool_Decals
+  - poolName: Ridgepoles
+    amount: 20
+    prefab: {fileID: 1203147622116870810, guid: 8fda26b3d36c7804ea8846983b7e1197,
+      type: 3}
+    parentTag: Pool_Enemies

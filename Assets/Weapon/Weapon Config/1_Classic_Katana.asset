@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5cfa4d99dadeed4a9fd17daee85f012, type: 3}
+  m_Name: 1_Classic_Katana
+  m_EditorClassIdentifier: 
+  weaponId: 1
+  weaponType: 2
+  weaponName: Classic Katana
+  shopIcon: {fileID: 21300000, guid: b104f9e3fb9a36045843b34ce37c32d3, type: 3}
+  weaponPrefab: {fileID: 6494162570474581407, guid: 208df310f58f8134596d52af62760b1b,
+    type: 3}
+  price: 0
+  posTemplate: {fileID: 11400000, guid: ef9ed4bc39c96a84886bb65667285f6f, type: 2}
