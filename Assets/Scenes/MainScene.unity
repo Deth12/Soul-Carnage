@@ -936,9 +936,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainLight: {fileID: 333678025}
-  TargetLayerMask:
+  targetLayerMask:
     serializedVersion: 2
-    m_Bits: 567
+    m_Bits: 1591
 --- !u!65 &299259678
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15166,10 +15166,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b138a7e462d46384a93101a9fedf1a25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacles:
-    serializedVersion: 2
-    m_Bits: 256
-  CanMove: 0
   walkSpeed: 7
   runSpeed: 13
   rotateSpeed: 10
@@ -15177,6 +15173,10 @@ MonoBehaviour:
   minX: -6
   jumpSpeed: 20
   gravity: 30
+  obstacles:
+    serializedVersion: 2
+    m_Bits: 256
+  CanMove: 0
 --- !u!114 &1969195777
 MonoBehaviour:
   m_ObjectHideFlags: 0

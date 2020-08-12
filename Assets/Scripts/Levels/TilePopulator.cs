@@ -11,8 +11,7 @@ public class TilePopulator : MonoBehaviour
         {
             Spawn(s, ground);    
         }
-        
-       // MeshRenderer leftWall = tileObj.GetComponent<Tile>().leftWall;
+        // MeshRenderer leftWall = tileObj.GetComponent<Tile>().leftWall;
        // SpawnWallDetail(leftWall, "Wall Rocks");
        // MeshRenderer rightWall = tileObj.GetComponent<Tile>().rightWall;
        // SpawnWallDetail(rightWall, "Wall Rocks");

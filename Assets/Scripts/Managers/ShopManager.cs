@@ -13,14 +13,14 @@ public class ShopManager : MonoBehaviour
         shopState = GameProfile.LoadShopState();
     }
     
-    [SerializeField] GameObject itemPrefab = null;
-    [SerializeField] Transform itemsContainter = null;
+    [SerializeField] private GameObject itemPrefab = null;
+    [SerializeField] private Transform itemsContainter = null;
 
-    [SerializeField] ScrollRect itemsScroll = null;
+    [SerializeField] private ScrollRect itemsScroll = null;
 
-    [SerializeField] Image swordsPage = null;
-    [SerializeField] Image scythesPage = null;
-    [SerializeField] Image axesPage = null;
+    [SerializeField] private Image swordsPage = null;
+    [SerializeField] private Image scythesPage = null;
+    [SerializeField] private Image axesPage = null;
     
     public Color pageSelectedColor;
     public Color pageDeselectedColor;
@@ -29,7 +29,7 @@ public class ShopManager : MonoBehaviour
     private ShopItem equippedItem;
     private ShopState shopState;
     
-    [SerializeField] Transform weaponHolder;
+    [SerializeField] private Transform weaponHolder;
     
     public void UpdateShopUI()
     {

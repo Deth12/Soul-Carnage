@@ -2,7 +2,7 @@
 
 public class PlayerInventory : MonoBehaviour
 {
-    public Transform WeaponHolder;
+    [SerializeField] private Transform WeaponHolder = null;
     
     void Start()
     {

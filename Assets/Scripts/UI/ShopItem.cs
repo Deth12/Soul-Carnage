@@ -1,21 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class ShopItem : MonoBehaviour
 {
     public ItemInfo item { get; private set; }
     
-    [SerializeField] Text nameText = null;
-    [SerializeField] Image itemIcon = null;
-    [SerializeField] Text priceText = null;
+    [SerializeField] private Text nameText = null;
+    [SerializeField] private Image itemIcon = null;
+    [SerializeField] private Text priceText = null;
     
-    [SerializeField] GameObject itemObject = null;
+    [SerializeField] private GameObject itemObject = null;
 
-    [SerializeField] GameObject selectedStyle = null;
-    [SerializeField] GameObject deselectedStyle = null;
-    [SerializeField] GameObject buyableStyle = null;
+    [SerializeField] private GameObject selectedStyle = null;
+    [SerializeField] private GameObject deselectedStyle = null;
+    [SerializeField] private GameObject buyableStyle = null;
 
    // private bool _isSelected;
 

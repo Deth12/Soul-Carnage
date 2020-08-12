@@ -9,14 +9,17 @@ public class Player : MonoBehaviour
     private Animator _anim;
     private AnimationEvents _events;
     private AudioSource _src;
-    
-    public PlayerStatus Status    { get => _status;    }
-    public PlayerMovement Movement { get => _movement; }
-    public PlayerActions Actions   { get => _actions;  }
-    public PlayerCollider Collider { get => _col;      }
-    public Animator Animator      { get => _anim;      }
-    public AnimationEvents Events { get => _events;    }
-    public AudioSource Audio      { get => _src;       }
+
+    public PlayerStatus Status => _status;
+
+    public PlayerMovement Movement => _movement;
+
+    public PlayerActions Actions => _actions;
+
+    public PlayerCollider Collider => _col;
+    public Animator Animator => _anim;
+    public AnimationEvents Events => _events;
+    public AudioSource Audio => _src;
 
     private void Start()
     {
@@ -33,6 +36,5 @@ public class Player : MonoBehaviour
         Actions.Init(this);
         Collider.Init(this);
         Events.Init(this);
-        
     }
 }

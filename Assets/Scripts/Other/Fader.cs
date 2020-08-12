@@ -15,7 +15,7 @@ public class Fader : MonoBehaviour
     private RectTransform fader;
     private Image img;
 
-    void Start()
+    private void Start()
     {
         fader = GetComponent<RectTransform>();
         img = GetComponent<Image>();

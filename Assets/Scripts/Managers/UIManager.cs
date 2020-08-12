@@ -16,26 +16,25 @@ public class UIManager : MonoBehaviour
     public AudioClip buttonClickSound;
 
     [Header("Panels")]
-    [SerializeField] UI_Panel startPanel = null;
-    [SerializeField] UI_Panel pausePanel = null;
-    [SerializeField] UI_Panel bottomPanel = null;
-    [SerializeField] UI_Panel topPanel = null;
-    [SerializeField] UI_Panel settingsPanel = null;
-    [SerializeField] UI_Panel shopPanel = null;
-    [SerializeField] UI_Panel endScreen = null;
+    [SerializeField] private UI_Panel startPanel = null;
+    [SerializeField] private UI_Panel pausePanel = null;
+    [SerializeField] private UI_Panel bottomPanel = null;
+    [SerializeField] private UI_Panel topPanel = null;
+    [SerializeField] private UI_Panel settingsPanel = null;
+    [SerializeField] private UI_Panel shopPanel = null;
+    [SerializeField] private UI_Panel endScreen = null;
 
     [Header("Buttons")] 
-    [SerializeField] UI_StartButton startButton = null;
+    [SerializeField] private UI_StartButton startButton = null;
     
-    [SerializeField] GameObject middlePanel;
-    [SerializeField] Text scoreCounter = null;
-    [SerializeField] Text endScreenScoreCounter = null;
-    [SerializeField] Text totalScore = null;
-    [SerializeField] Text soulsCounter = null;
+    [SerializeField] private Text scoreCounter = null;
+    [SerializeField] private Text endScreenScoreCounter = null;
+    [SerializeField] private Text totalScore = null;
+    [SerializeField] private Text soulsCounter = null;
 
-    [SerializeField] Image soulsBarMask = null;
+    [SerializeField] private Image soulsBarMask = null;
 
-    [SerializeField] Text title = null;
+    [SerializeField] private Text title = null;
     
     private void OnEnable()
     {

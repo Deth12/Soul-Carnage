@@ -10,8 +10,8 @@ public class AudioManager : MonoBehaviour
         Instance = this;
     }
 
-    public AudioSource Main;
-    public AudioSource SFX;
+    [SerializeField] private AudioSource Main = null;
+    [SerializeField] private AudioSource SFX = null;
 
     public void PlayOneShot(AudioClip clip, float volume = 0.5f)
     {

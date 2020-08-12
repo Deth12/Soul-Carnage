@@ -95,7 +95,7 @@ PrefabInstance:
     - target: {fileID: 1691703070304486384, guid: 797bc07076bee514184c1e89b23f7550,
         type: 3}
       propertyPath: m_CastShadows
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6963814513119760527, guid: 797bc07076bee514184c1e89b23f7550,
         type: 3}
@@ -275,7 +275,7 @@ PrefabInstance:
     - target: {fileID: 552018134495493332, guid: 4225f49c39ec77840b34160373828452,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 552018134495493332, guid: 4225f49c39ec77840b34160373828452,
         type: 3}

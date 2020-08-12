@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class AnimatedRawImage : MonoBehaviour
 {
-    [SerializeField] float animSpeed = 0.25f;
+    [SerializeField] private float animSpeed = 0.25f;
 
     private RawImage img;
 

@@ -27,18 +27,19 @@ public class CameraManager : MonoBehaviour
     private CameraMode cameraMode = CameraMode.mode_default;
     private Transform target;
     
-    [SerializeField] float followSpeed = 10f;
-    [SerializeField] float fovSpeed = 10f;
-    [SerializeField] float targetFOV;
+    [SerializeField] private float followSpeed = 10f;
+    [SerializeField] private float fovSpeed = 10f;
+    [SerializeField] private float targetFOV;
 
     [Header("FOV Settings")] 
-    [SerializeField] float defaultFOV = 90f;
-    [SerializeField] float sprintFOV = 100f;
+    [SerializeField] private float defaultFOV = 90f;
+    [SerializeField] private float sprintFOV = 100f;
     
     [Header("Camera Tweening")]
     public CameraPositionTemplate defaultCamera;
     public CameraPositionTemplate shopCamera;
-    public float changePosTemplateTime;
+    
+    [SerializeField] private float changePosTemplateTime = 0.5f;
     
     private bool IsFollowingTarget = false;
 

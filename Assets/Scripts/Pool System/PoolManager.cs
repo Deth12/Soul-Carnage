@@ -34,8 +34,6 @@ public class PoolManager : MonoBehaviour
 			p.Initialize(item.poolName, item.prefab, item.amount, g.transform);
 			pools.Add(p);
 		}
-		Debug.Log("Initialized");
-
 	}
 
 	public GameObject GetObject (string name, Vector3 position, Quaternion rotation) 
@@ -55,7 +53,6 @@ public class PoolManager : MonoBehaviour
 				}
 			}
 		} 
-		Debug.Log("Not found");
 		return result;
 	}
 

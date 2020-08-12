@@ -9,8 +9,8 @@ public class TileSpawner : MonoBehaviour
 
     private List<GameObject> tiles = new List<GameObject>();
 
-    [SerializeField] int maxTileAmount = 8;
-    [SerializeField] float tileLength = 30f;
+    [SerializeField] private int maxTileAmount = 8;
+    [SerializeField] private float tileLength = 30f;
     
     public bool IsSpawningAllowed = false;
 

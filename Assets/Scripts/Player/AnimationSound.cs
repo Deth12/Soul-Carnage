@@ -5,13 +5,13 @@ public class AnimationSound : MonoBehaviour
     private AudioSource src;
 
     [Header("Footsteps")] 
-    [SerializeField] AudioType footsteps = null;
+    [SerializeField] private AudioSet footsteps = null;
 
     [Header("Attack")] 
-    [SerializeField] AudioType attack = null;
+    [SerializeField] private AudioSet attack = null;
 
     [Header("Attack")] 
-    [SerializeField] AudioType jump = null;
+    [SerializeField] private AudioSet jump = null;
 
     private void Start()
     {
@@ -36,7 +36,7 @@ public class AnimationSound : MonoBehaviour
 }
 
 [System.Serializable]
-public class AudioType
+public class AudioSet
 {
     public AudioClip[] clips;
     private int counter = 0;

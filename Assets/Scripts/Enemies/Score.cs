@@ -15,7 +15,7 @@ public class Score : MonoBehaviour, IHittable
     [Header("Sounds")]
     [SerializeField] AudioClip[] deathSounds = null;
 
-    [SerializeField] Animator anim;
+    private Animator anim;
     private Transform player;
     private SphereCollider col;
     
@@ -27,6 +27,8 @@ public class Score : MonoBehaviour, IHittable
 
     private void OnEnable()
     {
+        if(anim == null)
+            anim = GetComponentInChildren<Animator>();
         anim.SetInteger("Run", Random.Range(1, 7));
         runSpeed = Random.Range(minRunSpeed, maxRunSpeed);
     }

@@ -5,30 +5,23 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController controller;
     private PlayerStatus status;
     private Animator anim;
-    public LayerMask obstacles;
-    
-    public bool CanMove = false;
     
     private float currentMoveSpeed = 0f;
-    [SerializeField] float walkSpeed = 5f;
-    [SerializeField] float runSpeed = 10f;
-    [SerializeField] float rotateSpeed = 0.5f;
     
-    [SerializeField] float maxX = 6.5f;
-    [SerializeField] float minX = -6.5f;
-    [SerializeField] float jumpSpeed = 100f;
-    [SerializeField] float gravity = 9.81f;
+    [SerializeField] private float walkSpeed = 5f;
+    [SerializeField] private float runSpeed = 10f;
+    [SerializeField] private float rotateSpeed = 0.5f;
+    
+    [SerializeField] private float maxX = 6.5f;
+    [SerializeField] private float minX = -6.5f;
+    [SerializeField] private float jumpSpeed = 100f;
+    [SerializeField] private float gravity = 9.81f;
 
     private Vector3 moveDirection;
     private float vSpeed = 0;
 
-    //public GameObject tailPrefab;
-
-    // public float tailSegmentsDistance = 0.5f;
-
-    
-    // public Vector3 rayOffset = new Vector3(0.5f, 0, 0);
-    // public float rayDist = 10f;
+    public LayerMask obstacles;
+    public bool CanMove = false;
 
     public void Init(Player p)
     {

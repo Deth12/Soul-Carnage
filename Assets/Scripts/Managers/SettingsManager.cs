@@ -11,14 +11,10 @@ public class SettingsManager : MonoBehaviour
 {
     public UniversalRenderPipelineAsset pipeline;
 
-    [SerializeField] Slider volumeSlider = null;
-    [SerializeField] Dropdown shadowsDropdown = null;
-    [SerializeField] Slider resolutionSlider = null;
-    [SerializeField] Dropdown aaDropdown = null;
-
-    private void Awake()
-    {
-    }
+    [SerializeField] private Slider volumeSlider = null;
+    [SerializeField] private Dropdown shadowsDropdown = null;
+    [SerializeField] private Slider resolutionSlider = null;
+    [SerializeField] private Dropdown aaDropdown = null;
 
     private void Start()
     {

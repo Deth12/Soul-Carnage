@@ -20,7 +20,7 @@ public class UI_Panel : MonoBehaviour
         }
     }
     
-    void Awake()
+    private void Awake()
     {
         anim = GetComponent<Animator>();
         anim.SetBool("isHidden", IsHidden);

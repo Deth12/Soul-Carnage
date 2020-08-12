@@ -5,11 +5,10 @@ public class PlayerActions : MonoBehaviour
     private PlayerStatus status;
     private Transform head;
     private Animator anim;
-    //private AudioSource src;
     
     public SphereCollider col { get; private set; }
     
-    [SerializeField] AudioClip atk;
+    [SerializeField] private AudioClip atk;
     
     public bool InAction = false;
     public bool CanAttack = false;

@@ -5,12 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class AsyncLoad : MonoBehaviour
 {
-    [SerializeField] float minWait = 2.5f;
+    [SerializeField] private float minWait = 2.5f;
     
     // Loading bar
-    [SerializeField] RectTransform fxHolder = null;
-    [SerializeField] Image fillImg = null;
-    [SerializeField] [Range(0, 1)] float progress = 0f;
+    [SerializeField] private RectTransform fxHolder = null;
+    [SerializeField] private Image fillImg = null;
+    [SerializeField] [Range(0, 1)] private float progress = 0f;
 
     private void Start()
     {

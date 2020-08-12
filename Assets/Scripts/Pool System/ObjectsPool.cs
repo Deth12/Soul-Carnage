@@ -42,8 +42,5 @@ public class ObjectsPool
 		objects.RemoveAt(0);
 		objects.Add(g);
 		return objects[objects.Count - 1];
-		
-		//AddObject();
-		//return objects[objects.Count-1];
 	}
 }
