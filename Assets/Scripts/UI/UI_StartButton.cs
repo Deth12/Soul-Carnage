@@ -33,6 +33,8 @@ public class UI_StartButton : MonoBehaviour, IPointerClickHandler //IPointerDown
 
     public void PauseGame()
     {
+        if(!GameManager.Instance.IsGameStarted)
+            return;
         state = StartButtonStates.menu_pause;
         anim.SetTrigger("Maximize");
         GameManager.Instance.PauseGame();

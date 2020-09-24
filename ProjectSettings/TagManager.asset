@@ -16,6 +16,8 @@ TagManager:
   - Path
   - Env_Details
   - WeaponHolder
+  - Pool_Bonuses
+  - Pool_SideTiles
   layers:
   - Default
   - TransparentFX

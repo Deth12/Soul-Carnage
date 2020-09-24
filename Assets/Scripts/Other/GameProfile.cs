@@ -119,6 +119,8 @@ public static class GameProfile
         settingsState.Add("ShadowsQuality", s.shadowsQuality);
         settingsState.Add("ResolutionScale", s.resolutionScale);
         settingsState.Add("AAQuality", s.aaQuality);
+        settingsState.Add("Weather", s.weather);
+        settingsState.Add("ShowFps", s.showFps);
         string path = Application.persistentDataPath + "/SettingsState.json";
         File.WriteAllText(path, settingsState.ToString());
         Debug.Log("SettingsState.json [UPDATED]\n" + settingsState.ToString());
@@ -134,6 +136,8 @@ public static class GameProfile
         s.shadowsQuality = settingsState?["ShadowsQuality"];
         s.resolutionScale = settingsState?["ResolutionScale"];
         s.aaQuality = settingsState?["AAQuality"];
+        s.weather = settingsState?["Weather"];
+        s.showFps = settingsState?["ShowFps"];
         return s;
     }
         
@@ -158,6 +162,8 @@ public class SettingsState
     public int shadowsQuality;
     public float resolutionScale;
     public int aaQuality;
+    public int weather;
+    public int showFps;
 
     public SettingsState()
     {
@@ -165,5 +171,7 @@ public class SettingsState
         shadowsQuality = 2;
         resolutionScale = 0.8f;
         aaQuality = 0;
+        weather = 1;
+        showFps = 0;
     }
 }

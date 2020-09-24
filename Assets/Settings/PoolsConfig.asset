@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pools:
   - poolName: Tiles
-    amount: 10
+    amount: 12
     prefab: {fileID: 3747095172866319423, guid: 83fe7a524bad9bf4cae991c50f888d46,
       type: 3}
     parentTag: Pool_Tiles
   - poolName: Score
-    amount: 40
+    amount: 60
     prefab: {fileID: 4010030618842869160, guid: 74901da725a01804083cbfd2da11563c,
       type: 3}
     parentTag: Pool_Enemies
@@ -46,6 +46,84 @@ MonoBehaviour:
     parentTag: Pool_Decals
   - poolName: Ridgepoles
     amount: 20
-    prefab: {fileID: 1203147622116870810, guid: 8fda26b3d36c7804ea8846983b7e1197,
+    prefab: {fileID: 8734976422592746208, guid: 688277e17836a1f4d9f1448f5d4e7d87,
       type: 3}
     parentTag: Pool_Enemies
+  - poolName: BonusSouls
+    amount: 10
+    prefab: {fileID: 2239519452060870910, guid: 711ddb6a92e02a9449f87ac951829d11,
+      type: 3}
+    parentTag: Pool_Bonuses
+  - poolName: CollectSouls
+    amount: 10
+    prefab: {fileID: 2998749201698565147, guid: a8c2b6523e96d8047a8879d87692026b,
+      type: 3}
+    parentTag: Pool_VFX
+  - poolName: BonusRage
+    amount: 10
+    prefab: {fileID: 2107985930324340060, guid: 9a84fa7f84ef33c42ab2d9fb1efd496d,
+      type: 3}
+    parentTag: Pool_Bonuses
+  - poolName: RidgepoleBreak
+    amount: 10
+    prefab: {fileID: 5083061877048703415, guid: 66e1808d7488e36498e7032f4c45afed,
+      type: 3}
+    parentTag: Pool_VFX
+  - poolName: Tiles_Side_R1
+    amount: 10
+    prefab: {fileID: 8396413754455467972, guid: 888b875b25245d7499e545ec09d78c30,
+      type: 3}
+    parentTag: Pool_SideTiles
+  - poolName: Tiles_Side_R2
+    amount: 10
+    prefab: {fileID: 924445293521619685, guid: f0056cc71719f814bbd85e4e14f1a56c, type: 3}
+    parentTag: Pool_SideTiles
+  - poolName: Tiles_Side_R3
+    amount: 10
+    prefab: {fileID: 7616513421544725992, guid: 6cd7623d9e00484499f6df27f5b18c77,
+      type: 3}
+    parentTag: Pool_SideTiles
+  - poolName: Tiles_Side_R4
+    amount: 10
+    prefab: {fileID: 5758111145356392985, guid: b3db5b744bff0494380036f455a1982b,
+      type: 3}
+    parentTag: Pool_SideTiles
+  - poolName: Tiles_Side_R5
+    amount: 10
+    prefab: {fileID: 8762863795131559293, guid: c8eaa6451f7c7984794e4f37106bf036,
+      type: 3}
+    parentTag: Pool_SideTiles
+  - poolName: Tiles_Side_R6
+    amount: 10
+    prefab: {fileID: 6752046230841683560, guid: db7cbbe53bc94ad4da814e3d04905a26,
+      type: 3}
+    parentTag: Pool_SideTiles
+  - poolName: Tiles_Side_L1
+    amount: 10
+    prefab: {fileID: 2981192320455366657, guid: d1686650b3d3cfc4797d6396ec6132eb,
+      type: 3}
+    parentTag: Pool_SideTiles
+  - poolName: Tiles_Side_L2
+    amount: 10
+    prefab: {fileID: 2818148669361111013, guid: ded5642de18fcd948ac391ce2b6288c3,
+      type: 3}
+    parentTag: Pool_SideTiles
+  - poolName: Tiles_Side_L3
+    amount: 10
+    prefab: {fileID: 7652278247775074989, guid: 4101b264bc7c53748b0ff087eb1b99fb,
+      type: 3}
+    parentTag: Pool_SideTiles
+  - poolName: Tiles_Side_L4
+    amount: 10
+    prefab: {fileID: 5913156507648245175, guid: 47dd85ae17b6fef45b7d681e66767e9e,
+      type: 3}
+    parentTag: Pool_SideTiles
+  - poolName: Tiles_Side_L5
+    amount: 10
+    prefab: {fileID: 4085421200346817047, guid: b2a0c2ce21942f448b4ab21fd1f94cae,
+      type: 3}
+    parentTag: Pool_SideTiles
+  - poolName: Tiles_Side_L6
+    amount: 10
+    prefab: {fileID: 307834703795013147, guid: c206cde727e44504e9010c026dbb6281, type: 3}
+    parentTag: Pool_SideTiles

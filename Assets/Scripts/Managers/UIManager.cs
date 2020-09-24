@@ -22,6 +22,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private UI_Panel topPanel = null;
     [SerializeField] private UI_Panel settingsPanel = null;
     [SerializeField] private UI_Panel shopPanel = null;
+    [SerializeField] private UI_Panel rageStatus = null;
     [SerializeField] private UI_Panel endScreen = null;
 
     [Header("Buttons")] 
@@ -32,8 +33,11 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Text totalScore = null;
     [SerializeField] private Text soulsCounter = null;
 
-    [SerializeField] private Image soulsBarMask = null;
-
+    [SerializeField] private Image energyLeft = null;
+    
+    [SerializeField] private Image rageLeft = null;
+    [SerializeField] private Text rageDuration = null;
+    
     [SerializeField] private Text title = null;
     
     private void OnEnable()
@@ -111,9 +115,20 @@ public class UIManager : MonoBehaviour
         if (showControlButtons)
             bottomPanel.IsHidden = false;
     }
-    
+
+    public void ShowRageStatus()
+    {
+        rageStatus.IsHidden = false;
+    }
+
+    public void HideRageStatus()
+    {
+        rageStatus.IsHidden = true;
+    }
+
     public void ShowEndScreen()
     {
+        AudioManager.Instance.PauseMainClip();
         topPanel.IsHidden = true;
         bottomPanel.IsHidden = true;
         endScreen.IsHidden = false;
@@ -168,7 +183,13 @@ public class UIManager : MonoBehaviour
     
     public void UpdateSoulBar(float normalizedValue)
     {
-        soulsBarMask.fillAmount = normalizedValue;
+        energyLeft.fillAmount = normalizedValue;
+    }
+
+    public void UpdateRageBar(float normalizedValue, float timeLeft)
+    {
+        rageLeft.fillAmount = normalizedValue;
+        rageDuration.text = timeLeft.ToString("0.00");
     }
     
     #endregion

@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour
         CanEnemyMove = true;
         InitialCutscene.Play();
         OnCutsceneStart?.Invoke();
+        AudioManager.Instance.SwitchMainClip(AudioManager.Instance.gameTheme, 1.4f);
+
     }
     
     public void StartGame()
@@ -38,6 +40,7 @@ public class GameManager : MonoBehaviour
         OnGameStart?.Invoke();
         IsStartCutsceneFinished = true;
         IsGameStarted = true;
+        WeatherSystem.Instance.Activate();
         UIManager.Instance.ShowGameOverlay(true);;
         InputManager.Instance.StartGame();
     }
@@ -46,24 +49,29 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1;
         UIManager.Instance.HidePauseMenu(IsStartCutsceneFinished);
+        AudioManager.Instance.ResumeMainClip();
     }
 
     public void PauseGame()
     {
         Time.timeScale = 0;
         UIManager.Instance.ShowPauseMenu();
+        AudioManager.Instance.PauseMainClip();
     }
 
     public void RestartGame()
     {
         IsGameStarted = false;
-        Time.timeScale = 1;
-        Fader.Instance.FadeIn(0.5f, delegate { SceneManager.LoadScene(1); });
+        Fader.Instance.FadeIn(0.5f, delegate 
+        { 
+            SceneManager.LoadScene(1); 
+            AudioManager.Instance.SwitchMainClip(AudioManager.Instance.mainMenuTheme, 0.8f);
+            GameProfile.Score = 0;
+            Time.timeScale = 1;
+        });
     }
     
     [Header("Score spawn")] 
     public int minScoreSpawnAmount = 0;
     public int maxScoreSpawnAmount = 3;
-    public float scoreDisappearDistance = 180f;
-    
 }

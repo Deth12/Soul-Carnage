@@ -38,27 +38,18 @@ public class Score : MonoBehaviour, IHittable
         if (GameManager.Instance.CanEnemyMove)
         {
             transform.Translate(Vector3.forward * (runSpeed * Time.deltaTime));
-            if (Vector3.Distance(transform.position, player.position) > GameManager.Instance.scoreDisappearDistance
-                || (transform.position - player.transform.position).z < -8f)
-                Disappear(false);
         }
     }
 
-    private void Disappear(bool dies)
+    private void Disappear()
     {
-        if (dies)
-        {
-            Vector3 spawnPos = new Vector3(transform.position.x, transform.position.y, transform.position.z + 2.3f);
-            PoolManager.instance.GetObject("Blood", spawnPos, Quaternion.identity);
-            Vector3 decalPos = new Vector3(col.bounds.min.x, col.bounds.min.y, col.bounds.min.z + 2.3f);
-            PoolManager.instance.GetObject("Blood_Decals_" + Random.Range(1,4), decalPos, Quaternion.identity);
-            //anim.SetTrigger("Death");
-            if(deathSounds.Length != 0)
-            {
-                Debug.Log("death");
-                AudioManager.Instance.PlayOneShot(deathSounds[Random.Range(0, deathSounds.Length)], 1f);
-            }
-        }
+        Vector3 spawnPos = new Vector3(transform.position.x, transform.position.y, transform.position.z + 2.3f);
+        PoolManager.instance.GetObject("Blood", spawnPos, Quaternion.identity);
+        Vector3 decalPos = new Vector3(col.bounds.min.x, col.bounds.min.y, col.bounds.min.z + 2.3f);
+        PoolManager.instance.GetObject("Blood_Decals_" + Random.Range(1,4), decalPos, Quaternion.identity);
+        //anim.SetTrigger("Death");
+        if(deathSounds.Length != 0)
+            AudioManager.Instance.PlayOneShot(deathSounds[Random.Range(0, deathSounds.Length)], 1f);
         anim.SetInteger("Run", 0);
         this.gameObject.SetActive(false);
     }
@@ -66,7 +57,7 @@ public class Score : MonoBehaviour, IHittable
     public void TakeHit(PlayerStatus status)
     {
         status.HarvestKillRewards(ScoreReward, SoulsReward, SoulEnergyReward);
-        Disappear(true);
+        Disappear();
     }
 
 }

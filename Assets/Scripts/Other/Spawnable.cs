@@ -3,8 +3,6 @@
 [CreateAssetMenu(menuName = "SnakeMadness/NewSpawnable")]
 public class Spawnable : ScriptableObject
 {
-    public GameObject prefab;
-
     public string poolName;
 
     public int minSpawnPerTile;

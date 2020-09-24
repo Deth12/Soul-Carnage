@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 moveDirection;
     private float vSpeed = 0;
 
+    public bool inBoost = false;
+    
     public LayerMask obstacles;
     public bool CanMove = false;
 
@@ -31,7 +34,18 @@ public class PlayerMovement : MonoBehaviour
         currentMoveSpeed = walkSpeed;
     }
 
-    void Update()
+    public void ActivateBoost(float multiplier)
+    {
+        inBoost = true;
+        currentMoveSpeed = runSpeed * multiplier;
+    }
+
+    public void DeactivateBoost()
+    {
+        inBoost = false;
+    }
+
+    private void Update()
     {
         if(InputManager.Instance.StartTrigger && !CanMove)
         {
@@ -43,28 +57,40 @@ public class PlayerMovement : MonoBehaviour
             HandleControl();
     }
 
-    void HandleControl()
+    private void HandleControl()
     {
         anim.SetBool("Grounded", controller.isGrounded);
         HandleMovement();        
+          
+        /*
+        if (Input.touchCount > 0){
+            Touch touch = Input.GetTouch(0);
+
+            int direction = (touch.position.x > (Screen.width / 2)) ? 1 : -1;
+            HandleMovement(direction);
+        }
+        */
     }
-    
-    void HandleMovement()
+
+    private void HandleMovement()
     {
         moveDirection = Vector3.forward * (status.IsAlive ? currentMoveSpeed : 0);
         vSpeed = (controller.isGrounded ? -1 : vSpeed - gravity * Time.deltaTime);
         if(status.IsAlive)
-            HandleInput();
+            HandleInput(inBoost);
         moveDirection.y = vSpeed;
         controller.Move(moveDirection * Time.deltaTime);
-//        Debug.Log("Grounded: " + controller.isGrounded + " vSpeed: " + vSpeed);
+        
+        /*
+        float xPos = transform.position.x + (direction * Time.deltaTime * paddleSpeed);
+        playerPos = new Vector3 (Mathf.Clamp (xPos, -8f, 8f), -9.5f, 0f);
+        transform.position = playerPos;
+        */
     }
 
-    void HandleInput()
+    private void HandleInput(bool strafeOnly = false)
     {
         // Mobile
-        if(Input.GetKeyDown(KeyCode.Space) || InputManager.Instance.JumpTriggered) 
-            Jump();
         if(InputManager.Instance.LeftTapHold)
             Move(Vector3.left);
         if(InputManager.Instance.RightTapHold)
@@ -75,6 +101,18 @@ public class PlayerMovement : MonoBehaviour
             Move(Vector3.right);
         if (Input.GetKey(KeyCode.A))
             Move(Vector3.left);
+
+        // Disable run and jump control during rage
+        if (strafeOnly)
+        {
+            // TOFIX
+            anim.SetBool("Run", true);
+            CameraManager.instance.ChangeFOV(FOVMode.fov_sprint);
+            return;
+        }
+        
+        if(Input.GetKeyDown(KeyCode.Space) || InputManager.Instance.JumpTriggered) 
+            Jump();
         
         bool isRunning = InputManager.Instance.RunHold;
         currentMoveSpeed = isRunning ? runSpeed : walkSpeed;
@@ -82,7 +120,7 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("Run", isRunning);
     }
 
-    void Jump()
+    private void Jump()
     {
         if (controller.isGrounded) 
         {
@@ -91,7 +129,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     
-    void Move(Vector3 direction)
+    private void Move(Vector3 direction)
     {
         if (direction == Vector3.left)
         {
@@ -109,7 +147,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
-
+    
     /*void HandleTailMovement()
     {
         for (int i = 0; i < tail.Count; i++)

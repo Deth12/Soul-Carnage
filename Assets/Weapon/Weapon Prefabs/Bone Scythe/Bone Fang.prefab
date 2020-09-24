@@ -1,0 +1,187 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3822492948837855192
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4487812535438423394}
+  - component: {fileID: 713875707634465479}
+  - component: {fileID: 3318244065551961613}
+  m_Layer: 0
+  m_Name: Bone Fang
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4487812535438423394
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3822492948837855192}
+  m_LocalRotation: {x: -0.2555755, y: 0.63186246, z: -0.72930586, w: -0.059531797}
+  m_LocalPosition: {x: -0.019, y: -0.011, z: 0.18}
+  m_LocalScale: {x: 25.958479, y: 25.957352, z: 25.958158}
+  m_Children:
+  - {fileID: 8071485505771701285}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 107.811005, y: -103.39499, z: 50.535995}
+--- !u!33 &713875707634465479
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3822492948837855192}
+  m_Mesh: {fileID: -462981019419857548, guid: 93176e6bad4049b4e9ff7d9d2856ef8f, type: 3}
+--- !u!23 &3318244065551961613
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3822492948837855192}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 9c28d3699ef7a9c40935dd93582cb308, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1001 &8622850517469624561
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4487812535438423394}
+    m_Modifications:
+    - target: {fileID: 552018134495493332, guid: 7cd6698be1f522a4ca74130d332e9655,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0107
+      objectReference: {fileID: 0}
+    - target: {fileID: 552018134495493332, guid: 7cd6698be1f522a4ca74130d332e9655,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.049
+      objectReference: {fileID: 0}
+    - target: {fileID: 552018134495493332, guid: 7cd6698be1f522a4ca74130d332e9655,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0007
+      objectReference: {fileID: 0}
+    - target: {fileID: 552018134495493332, guid: 7cd6698be1f522a4ca74130d332e9655,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 552018134495493332, guid: 7cd6698be1f522a4ca74130d332e9655,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 552018134495493332, guid: 7cd6698be1f522a4ca74130d332e9655,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 552018134495493332, guid: 7cd6698be1f522a4ca74130d332e9655,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 552018134495493332, guid: 7cd6698be1f522a4ca74130d332e9655,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 552018134495493332, guid: 7cd6698be1f522a4ca74130d332e9655,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 552018134495493332, guid: 7cd6698be1f522a4ca74130d332e9655,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 552018134495493332, guid: 7cd6698be1f522a4ca74130d332e9655,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1660154938062470409, guid: 7cd6698be1f522a4ca74130d332e9655,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.r
+      value: 0.735849
+      objectReference: {fileID: 0}
+    - target: {fileID: 1660154938062470409, guid: 7cd6698be1f522a4ca74130d332e9655,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.g
+      value: 0.735849
+      objectReference: {fileID: 0}
+    - target: {fileID: 1660154938062470409, guid: 7cd6698be1f522a4ca74130d332e9655,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.b
+      value: 0.735849
+      objectReference: {fileID: 0}
+    - target: {fileID: 1660154938062470409, guid: 7cd6698be1f522a4ca74130d332e9655,
+        type: 3}
+      propertyPath: EmissionModule.rateOverDistance.scalar
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1660154938062470409, guid: 7cd6698be1f522a4ca74130d332e9655,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1660154938062470409, guid: 7cd6698be1f522a4ca74130d332e9655,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 2802427056035233043, guid: 7cd6698be1f522a4ca74130d332e9655,
+        type: 3}
+      propertyPath: m_Name
+      value: Magic Trail FX [Blood]
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7cd6698be1f522a4ca74130d332e9655, type: 3}
+--- !u!4 &8071485505771701285 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 552018134495493332, guid: 7cd6698be1f522a4ca74130d332e9655,
+    type: 3}
+  m_PrefabInstance: {fileID: 8622850517469624561}
+  m_PrefabAsset: {fileID: 0}

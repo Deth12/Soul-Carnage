@@ -6,6 +6,7 @@ public class Ridgepole : MonoBehaviour
     private Vector3 centerPos;
 
     public LayerMask layerMask;
+    [SerializeField] private ParticleSystem breakEffect;
 
     private void OnEnable()
     {
@@ -22,16 +23,24 @@ public class Ridgepole : MonoBehaviour
         )
         {
             centerPos = new Vector3((l.point.x + r.point.x), transform.localPosition.y, transform.localPosition.z);
-            Debug.Log(centerPos + " On Enable");
             transform.localPosition = centerPos;
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag.Equals("Player"))
         {
-            other.GetComponent<PlayerStatus>().ChangeHealth(-100);
+            PlayerStatus s = other.GetComponent<PlayerStatus>();
+            if (!s.IsInvincible)
+                other.GetComponent<PlayerStatus>().ChangeHealth(-100);
+            else
+                Break();
         }
+    }
+
+    private void Break()
+    {
+        breakEffect.Play();
     }
 }

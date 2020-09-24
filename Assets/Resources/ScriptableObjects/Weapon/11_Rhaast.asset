@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5cfa4d99dadeed4a9fd17daee85f012, type: 3}
+  m_Name: 11_Rhaast
+  m_EditorClassIdentifier: 
+  weaponId: 11
+  weaponType: 1
+  weaponName: Rhaast
+  shopIcon: {fileID: 21300000, guid: b51111921a3c94640b44c49d87f5bb3c, type: 3}
+  weaponPrefab: {fileID: 6489690612516571273, guid: 7e0bfc54bfcbb9341830d86e48fc4bec,
+    type: 3}
+  price: 1800
+  posTemplate: {fileID: 11400000, guid: a1b2aa3b0a456d2459a512bfccd48a96, type: 2}

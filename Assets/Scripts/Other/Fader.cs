@@ -28,6 +28,7 @@ public class Fader : MonoBehaviour
         img.raycastTarget = true;
         LeanTween.alpha(fader, 1f, time)
             .setFrom(0f)
+            .setIgnoreTimeScale(true)
             .setOnComplete(() =>
             {
                 img.raycastTarget = false;
@@ -40,6 +41,7 @@ public class Fader : MonoBehaviour
         img.raycastTarget = true;
         LeanTween.alpha(fader, 0f, time)
             .setFrom(1f)
+            .setIgnoreTimeScale(true)
             .setOnComplete(() =>
             {
                 img.raycastTarget = false;

@@ -90,7 +90,7 @@ PrefabInstance:
     - target: {fileID: 1660154938062470409, guid: 7cd6698be1f522a4ca74130d332e9655,
         type: 3}
       propertyPath: EmissionModule.rateOverDistance.scalar
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1660154938062470409, guid: 7cd6698be1f522a4ca74130d332e9655,
         type: 3}
@@ -120,7 +120,7 @@ PrefabInstance:
     - target: {fileID: 1660154938062470409, guid: 7cd6698be1f522a4ca74130d332e9655,
         type: 3}
       propertyPath: InitialModule.startLifetime.minScalar
-      value: 0.6
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1660154938062470409, guid: 7cd6698be1f522a4ca74130d332e9655,
         type: 3}
@@ -160,12 +160,12 @@ PrefabInstance:
     - target: {fileID: 1660154938062470409, guid: 7cd6698be1f522a4ca74130d332e9655,
         type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 0.8
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 1660154938062470409, guid: 7cd6698be1f522a4ca74130d332e9655,
         type: 3}
       propertyPath: ShapeModule.radius.value
-      value: 0.2
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1660154938062470409, guid: 7cd6698be1f522a4ca74130d332e9655,
         type: 3}
@@ -195,6 +195,26 @@ PrefabInstance:
     - target: {fileID: 1660154938062470409, guid: 7cd6698be1f522a4ca74130d332e9655,
         type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1660154938062470409, guid: 7cd6698be1f522a4ca74130d332e9655,
+        type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1660154938062470409, guid: 7cd6698be1f522a4ca74130d332e9655,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1660154938062470409, guid: 7cd6698be1f522a4ca74130d332e9655,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.g
+      value: 0.07058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 1660154938062470409, guid: 7cd6698be1f522a4ca74130d332e9655,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.b
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2802427056035233043, guid: 7cd6698be1f522a4ca74130d332e9655,

@@ -12,6 +12,12 @@ public class TileSpawner : MonoBehaviour
     [SerializeField] private int maxTileAmount = 8;
     [SerializeField] private float tileLength = 30f;
     
+    // Side Tiles
+    [SerializeField] private string[] leftSideTilePools;
+    [SerializeField] private string[] rightSideTilePools;
+    [SerializeField] private float sideTileOffset = 27f;
+    
+    public float TotalLength { get => maxTileAmount * tileLength; }
     public bool IsSpawningAllowed = false;
 
     private void Start()
@@ -51,8 +57,22 @@ public class TileSpawner : MonoBehaviour
     {
         Vector3 spawnPos = new Vector3(0f, 0f, nextSpawnZ);
         GameObject tile = PoolManager.instance.GetObject("Tiles", spawnPos, Quaternion.identity);
+        SpawnSideTiles(tile.transform.position);
         if (populate)
             populator.PopulateTile(tile);
         nextSpawnZ += tileLength;
+    }
+    
+    public void SpawnSideTiles(Vector3 tilePos)
+    {
+        PoolManager.instance
+            .GetObject
+            (leftSideTilePools[Random.Range(0, leftSideTilePools.Length)],
+                new Vector3(-sideTileOffset, tilePos.y, tilePos.z),
+                Quaternion.identity);
+        PoolManager.instance
+            .GetObject(rightSideTilePools[Random.Range(0, rightSideTilePools.Length)],
+                new Vector3(sideTileOffset, tilePos.y, tilePos.z),
+                Quaternion.identity);
     }
 }
